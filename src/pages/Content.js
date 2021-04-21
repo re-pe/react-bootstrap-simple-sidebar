@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Container } from "react-bootstrap";
-import Header from "../../components/_Header";
+import Header from "../components/_Header";
 
 const Content = (props) => {
     const { isOpen, toggle } = props;
