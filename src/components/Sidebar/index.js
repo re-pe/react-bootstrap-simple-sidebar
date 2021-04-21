@@ -7,25 +7,16 @@ import {
   faQuestion,
   faImage,
   faCopy,
-  faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import SubMenu from "./SubMenu";
-import { Nav, Button } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import classNames from "classnames";
 
 const SideBar = (props) => {
-    const { isOpen, toggle } = props;
+    const { isOpen } = props;
     return (
         <div className={classNames("sidebar", { "is-open": isOpen })}>
             <div className="sidebar-header">
-                <Button
-                    variant="link"
-                    onClick={toggle}
-                    style={{ color: "#fff" }}
-                    className="mt-4"
-                >
-                    <FontAwesomeIcon icon={faTimes} pull="right" size="xs" />
-                </Button>
                 <h3>react-bootstrap sidebar</h3>
             </div>
 
@@ -39,22 +30,16 @@ const SideBar = (props) => {
                     </Nav.Link>
                 </Nav.Item>
 
-                <SubMenu
-                    title="Pages"
-                    icon={faCopy}
-                    items={["Link", "Link2", "Active"]}
-                />
-
                 <Nav.Item>
                     <Nav.Link href="/">
-                        <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
+                        <FontAwesomeIcon icon={faImage} className="mr-2" />
                         About
                     </Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item>
                     <Nav.Link href="/">
-                        <FontAwesomeIcon icon={faImage} className="mr-2" />
+                        <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
                         Portfolio
                     </Nav.Link>
                 </Nav.Item>
@@ -72,6 +57,12 @@ const SideBar = (props) => {
                         Contact
                     </Nav.Link>
                 </Nav.Item>
+
+                <SubMenu
+                    title="Pages"
+                    icon={faCopy}
+                    items={["Link", "Link2", "Active"]}
+                />
             </Nav>
         </div>
     );

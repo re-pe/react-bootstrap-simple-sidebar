@@ -23,7 +23,7 @@ const SubMenu = (props) => {
                     onClick={toggleNavbar}
                 >
                     <FontAwesomeIcon icon={icon} className="mr-2" />
-                    {title}
+                        {title}
                     <FontAwesomeIcon
                     icon={collapsed ? faCaretDown : faCaretUp}
                     className="float-right"
