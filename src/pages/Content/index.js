@@ -1,19 +1,17 @@
 import React from "react";
 import classNames from "classnames";
 import { Container } from "react-bootstrap";
-import NavBar from "./Navbar";
+import Header from "../../components/Header";
 
-class Content extends React.Component {
-  render() {
+const Content = (props) => {
     return (
       <Container
         fluid
-        className={classNames("content", { "is-open": this.props.isOpen })}
+        className={classNames("content", { "is-open": props.isOpen })}
       >
-        <NavBar toggle={this.props.toggle} />
+        <Header toggle={props.toggle} />
       </Container>
     );
-  }
 }
 
 export default Content;
